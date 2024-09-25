@@ -52,7 +52,7 @@ This Solidity smart contract implements a basic voting system that allows users 
 2. **Cloning the Repo**
    Clone the project repository and navigate into it:
    ```bash
-   git clone https://github.com/your/repository.git
+   git clone https://github.com/muhammadjehanzaib/VotingSmartContract.git
    cd repository
    ```
 
