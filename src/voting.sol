@@ -37,7 +37,7 @@ contract VotingSystem {
         voters.push(msg.sender);
     }
 
-    function addCandidate(string memory _name) public onlyOwner{
+    function addCandidate(string memory _name) public onlyOwner {
         Candidate memory newCandidate = Candidate(_name, 0);
         candidate.push(newCandidate);
     }
@@ -46,9 +46,7 @@ contract VotingSystem {
         return candidate.length;
     }
 
-    function getCandidate(
-        uint256 _index
-    ) public view returns (string memory, uint256) {
+    function getCandidate(uint256 _index) public view returns (string memory, uint256) {
         require(_index < candidate.length, "Candidate doesn't exist!");
         return (candidate[_index].name, candidate[_index].voteCount);
     }
@@ -83,8 +81,7 @@ contract VotingSystem {
     function vote(uint256 _candidate) public {
         require(votingState == VotingState.START, "Voting isn't started yet!");
         require(
-            isVoterRegistered[msg.sender] && !haveVoted[msg.sender],
-            "You are not registered for vote Or already voted."
+            isVoterRegistered[msg.sender] && !haveVoted[msg.sender], "You are not registered for vote Or already voted."
         );
         candidate[_candidate].voteCount += 1;
         haveVoted[msg.sender] = true;
