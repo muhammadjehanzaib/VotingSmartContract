@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity 0.8.19;
 
-import {DeployVoting} from "../script/voting.s.sol";
+import {DeployVoting} from "../script/DeployVoting.s.sol";
 import {VotingSystem} from "../src/voting.sol";
 import {Test} from "forge-std/Test.sol";
 
