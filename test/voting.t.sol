@@ -84,12 +84,11 @@ contract TestVotingSystem is Test {
         votingSystem.vote(0);
         vm.stopPrank();
 
-        // Assert 
+        // Assert
 
         vm.prank(msg.sender);
         string memory winner = votingSystem.endVoting();
 
         assert(keccak256(abi.encodePacked(winner)) == keccak256(abi.encodePacked("Ali")));
-
     }
 }
