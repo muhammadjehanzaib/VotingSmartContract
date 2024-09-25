@@ -1,0 +1,18 @@
+Compiling 27 files with Solc 0.8.19
+Solc 0.8.19 finished in 3.63s
+Compiler run successful!
+Analysing contracts...
+Running tests...
+
+Ran 3 tests for test/voting.t.sol:TestVotingSystem
+[PASS] testCheckWinner() (gas: 420400)
+[PASS] testStartVoting() (gas: 38296)
+[PASS] testVoterRegistrationAndVote() (gas: 404108)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 150.84ms (2.11ms CPU time)
+
+Ran 1 test suite in 153.43ms (150.84ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
+| File                | % Lines        | % Statements   | % Branches    | % Funcs       |
+|---------------------|----------------|----------------|---------------|---------------|
+| script/voting.s.sol | 100.00% (4/4)  | 100.00% (4/4)  | 100.00% (0/0) | 100.00% (1/1) |
+| src/voting.sol      | 88.00% (22/25) | 88.89% (24/27) | 45.45% (5/11) | 77.78% (7/9)  |
+| Total               | 89.66% (26/29) | 90.32% (28/31) | 45.45% (5/11) | 80.00% (8/10) |
