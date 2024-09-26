@@ -114,6 +114,6 @@ contract TestVotingSystem is Test {
         vm.stopPrank();
 
         //Act & Assert
-        assert(votingSystem.getTotalCandidates() == 2);                
+        assert(votingSystem.getTotalCandidates() == 2);
     }
 }
