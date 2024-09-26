@@ -91,4 +91,29 @@ contract TestVotingSystem is Test {
 
         assert(keccak256(abi.encodePacked(winner)) == keccak256(abi.encodePacked("Ali")));
     }
+
+    function testAreCandidatesAreGettingEnroled() public {
+        //Arrange
+        vm.startPrank(msg.sender);
+        votingSystem.addCandidate("Ali");
+        votingSystem.addCandidate("Wali");
+        votingSystem.startVoting();
+        vm.stopPrank();
+
+        //Act & Assert
+        (string memory _name,) = votingSystem.getCandidate(0);
+        assert(keccak256(abi.encodePacked(_name)) == keccak256(abi.encodePacked("Ali")));
+    }
+
+    function testToGetTotalNoOfCandidate() public {
+        //Arrange
+        vm.startPrank(msg.sender);
+        votingSystem.addCandidate("Ali");
+        votingSystem.addCandidate("Wali");
+        votingSystem.startVoting();
+        vm.stopPrank();
+
+        //Act & Assert
+        assert(votingSystem.getTotalCandidates() == 2);                
+    }
 }
