@@ -66,7 +66,7 @@ anvil
 ```
 
 ### Deploy the Contract
-Create a script `Deploy.s.sol` file in the `script` folder and add:
+Create a script `DeployVoting.s.sol` file in the `script` folder and add:
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.19;
@@ -88,7 +88,7 @@ contract DeployVoting is Script {
 
 ### Run the Deploy Script:
 ```bash
-forge script script/Deploy.s.sol --fork-url http://localhost:8545 --broadcast
+forge script script/DeployVoting.s.sol --fork-url http://localhost:8545 --broadcast
 ```
 
 ## How to Use
